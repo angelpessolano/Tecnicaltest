@@ -1,6 +1,5 @@
 <?php
 
-// Conexión a la base de datos
 $host = "localhost";
 $username = "root";
 $password = "";
@@ -19,5 +18,3 @@ if ($mysqli->connect_error) {
 
 // Cierre de la conexión
 //$mysqli->close();
-
-?>
