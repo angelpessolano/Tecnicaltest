@@ -1,14 +1,17 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categor&iacute;as y productos</title>
-    <link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.10.3/themes/redmond/jquery-ui.css' />
-    <link rel='stylesheet' type='text/css' href='http://www.trirand.com/blog/jqgrid/themes/ui.jqgrid.css' />
 
-    <script type='text/javascript' src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script type='text/javascript' src='http://www.trirand.com/blog/jqgrid/js/jquery-ui-custom.min.js'></script>
-    <script type='text/javascript' src='http://www.trirand.com/blog/jqgrid/js/i18n/grid.locale-en.js'></script>
-    <script type='text/javascript' src='http://www.trirand.com/blog/jqgrid/js/jquery.jqGrid.js'></script>
+    <link rel='stylesheet' type='text/css' href='css/jquery-ui.css' />
+    <link rel='stylesheet' type='text/css' href='css/ui.jqgrid.css' />
+
+    <script type='text/javascript' src="js/jquery-1.10.1.min.js"></script>
+    <script type='text/javascript' src='js/jquery-ui-custom.min.js'></script>
+    <script type='text/javascript' src='js/grid.locale-es.js'></script>
+    <script type='text/javascript' src='js/jquery.jqGrid.js'></script>
 
     <script>
         $(document).ready(function() {
@@ -16,7 +19,7 @@
             $("#list").jqGrid({
                 url: 'GetData.php',
                 datatype: 'json',
-                colNames: ['ID', 'Categoría', 'Cantidad de productos'],
+                colNames: ['ID', 'Categor&iacute;a', 'Cantidad de productos'],
                 colModel: [{
                         name: 'id_category',
                         index: 'id_category',
@@ -56,7 +59,7 @@
                 $("#" + childGridID).jqGrid({
                     url: 'GetDataCategory.php?id_category=' + id_category,
                     datatype: 'json',
-                    colNames: ['ID', 'Producto', 'Cantidad de características'],
+                    colNames: ['ID', 'Producto', 'Cantidad de caracter&iacute;sticas'],
                     colModel: [{
                             name: 'id_product',
                             index: 'id_product',
@@ -97,7 +100,7 @@
                 $("#" + childGridID2).jqGrid({
                     url: 'GetDataProduct.php?id_product=' + id_product,
                     datatype: 'json',
-                    colNames: ['ID', ' Característica', 'Valor'],
+                    colNames: ['ID', ' Caracter&iacute;stica', 'Valor'],
                     colModel: [{
                             name: 'id_feature',
                             index: 'id_feature',
@@ -131,7 +134,10 @@
     </script>
 </head>
 <body>
+    <h2>Categor&iacute;as y productos</h2>
+
     <table id="list"></table>
+
     <div id="pager"></div>
 </body>
 </html>
