@@ -17,7 +17,7 @@
         $(document).ready(function() {
 
             $("#list").jqGrid({
-                url: 'GetData.php',
+                url: 'src/GetData.php',
                 datatype: 'json',
                 colNames: ['ID', 'Categor&iacute;a', 'Cantidad de productos'],
                 colModel: [{
@@ -57,7 +57,7 @@
                 $("#" + parentRowId).append('<table id=' + childGridID + '></table><div id=' + childGridPagerID + '></div>');
 
                 $("#" + childGridID).jqGrid({
-                    url: 'GetDataCategory.php?id_category=' + id_category,
+                    url: 'src/GetDataCategory.php?id_category=' + id_category,
                     datatype: 'json',
                     colNames: ['ID', 'Producto', 'Cantidad de caracter&iacute;sticas'],
                     colModel: [{
@@ -98,7 +98,7 @@
                 $("#" + parentRowId2).append('<table id=' + childGridID2 + '></table><div id=' + childGridPagerID2 + '></div>');
 
                 $("#" + childGridID2).jqGrid({
-                    url: 'GetDataProduct.php?id_product=' + id_product,
+                    url: 'src/GetDataProduct.php?id_product=' + id_product,
                     datatype: 'json',
                     colNames: ['ID', ' Caracter&iacute;stica', 'Valor'],
                     colModel: [{

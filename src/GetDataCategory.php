@@ -1,11 +1,8 @@
 <?php
 
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'midcenturywareho_psdb2');
-define('DB_USER', 'root');
-define('DB_PASSWORD', '');
+require_once __DIR__.'/config.php';
 
-$con = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+$con = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
 if (mysqli_connect_errno()) {
     printf("Falló la conexión: %s\n", mysqli_connect_error());
